@@ -52,7 +52,10 @@
 
                             {{-- Cart Icon --}}
                             <li class="nav-item">
-                                <a class="nav-link" href=""><i class="fas fa-shopping-cart"></i><span class="badge badge-primary">4</span></a>
+                                <a class="nav-link" href="{{ route('cart') }}">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span class="badge badge-primary"> {{ Auth::user()->cartPoductsCount() }} </span>
+                                </a>
                             </li>
 
                             <li class="nav-item dropdown">

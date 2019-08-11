@@ -25,9 +25,18 @@
                     <div class="card shadow border-0 rounded-0">
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">{{ $product->price }}</h6>
-                            <h5 class="card-title">{{ $product->name }}</h5>
+                            <h5 class="card-title">
+                                <a href="{{ route('show', $product->id) }}"> {{ $product->name }} </a>
+                            </h5>
                             <p class="card-text">{{ str_limit($product->description, 100) }}</p>
-                            <a href="#" class="btn btn-success btn-sm"><i class="fas fa-shopping-cart"></i>&nbsp; Add To Cart</a>
+                            <a href="{{ route('add-to-cart', $product->id) }}" class="btn btn-success btn-sm"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('add-to-cart-' + {{ $product->id }} ).submit();">
+                                <i class="fas fa-shopping-cart"></i>&nbsp; Add To Cart
+                            </a>
+                            <form action="{{ route('add-to-cart', $product->id) }}" method="post" id="add-to-cart-{{ $product->id }}" class="d-none">
+                                @csrf
+                            </form>
                             <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-heart"></i></a>
                         </div>
                     </div>

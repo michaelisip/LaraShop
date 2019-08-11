@@ -37,4 +37,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function cartPoductsCount() : int
+    {
+        return $this->cart->products()->count();
+    }
+
+    // Eloquent relationships
+    public function cart()
+    {
+        return $this->hasOne(Cart::class);
+    }
 }

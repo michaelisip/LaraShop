@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Product extends Model
+class Cart extends Model
 {
     use SoftDeletes;
 
@@ -15,13 +15,17 @@ class Product extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'price',
+        'user_id',
     ];
 
-    // Eloquent Relationship
-    public function carts()
+    // Eloquent relationships
+    public function user()
     {
-        return $this->belongsToMany(Cart::class);
+        return $this->belongsTo(User::class);
     }
 
+    public function products()
+    {
+        return $this->belongsToMany(Product::class);
+    }
 }
