@@ -21,6 +21,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/product/{id}', 'HomeController@show')->name('show');
+
+Route::get('cart', 'CartController@index')->name('cart');
+Route::post('cart/product/{id}/add', 'CartController@addToCart')->name('add-to-cart');
+Route::post('cart/product/{id}/remove', 'CartController@removeToCart')->name('remove-to-cart');
+
 /**
  * Admin Routes
  */

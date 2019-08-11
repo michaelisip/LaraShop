@@ -26,4 +26,15 @@ class HomeController extends Controller
     {
         return view('home', ['products' => Product::paginate(6)]);
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        return view('user.product', ['product' => Product::findOrFail($id)]);
+    }
 }
