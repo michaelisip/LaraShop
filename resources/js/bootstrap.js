@@ -8,9 +8,23 @@ window._ = require('lodash');
 
 try {
     window.Popper = require('popper.js').default;
-    window.$ = window.jQuery = require('jquery');
+
+    // This does work for some reason so cdn was used
+    // window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
+    require('jquery-ui');
+    require('chart.js');
+    require('admin-lte');
+    require('sparkline');
+    require('moment');
+    require('daterangepicker');
+    require('tempusdominus-bootstrap-4');
+    require('summernote');
+    require('fastclick');
+    require('overlayscrollbars');
+    require('datatables.net-bs4');
+
 } catch (e) {}
 
 /**

@@ -14,7 +14,7 @@
         "axios": "^0.18",
         "bootstrap": "^4.1.0",
         "cross-env": "^5.1",
-        "jquery": "^3.2",
+        "jquery": "^3.4.1",
         "laravel-mix": "^4.0.7",
         "lodash": "^4.17.5",
         "popper.js": "^1.12",
@@ -23,5 +23,18 @@
         "sass-loader": "^7.1.0",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "admin-lte": "^3.0.0-beta.2",
+        "chart.js": "^2.8.0",
+        "datatables": "^1.10.18",
+        "icheck-bootstrap": "^3.0.1",
+        "ionicons": "^4.6.2",
+        "ionicons-npm": "^2.0.1",
+        "jquery-ui": "^1.12.1",
+        "overlayscrollbars": "^1.9.1",
+        "sparkline": "^0.2.0",
+        "summernote": "^0.8.12",
+        "tempusdominus-bootstrap-4": "^5.1.2"
     }
 }
