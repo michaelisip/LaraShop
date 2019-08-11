@@ -10,22 +10,30 @@
     </div>
 
     {{-- Products --}}
-    <h1> Products </h1>
+
+    <div class="d-flex align-items-center">
+        <h1> Products </h1>
+        <div class="ml-3 align-middle mb-0">
+            {{ $products->render() }}
+        </div>
+    </div>
     <hr>
-    <div class="row justify-content-center">
-        @for ($i = 0; $i < 10; $i++)
-            <div class="col col-lg-3">
-                <div class="card shadow border-0 rounded-0">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+    @foreach ($products->chunk(4) as $chunk)
+        <div class="row justify-content-center">
+            @foreach ($chunk as $key => $product)
+                <div class="col col-lg-3">
+                    <div class="card shadow border-0 rounded-0">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">{{ $product->price }}</h6>
+                            <h5 class="card-title">{{ $product->name }}</h5>
+                            <p class="card-text">{{ str_limit($product->description, 100) }}</p>
+                            <a href="#" class="btn btn-success btn-sm"><i class="fas fa-shopping-cart"></i>&nbsp; Add To Cart</a>
+                            <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-heart"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        @endfor
-    </div>
+            @endforeach
+        </div>
+    @endforeach
 </div>
 @endsection

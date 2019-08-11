@@ -117334,13 +117334,13 @@ try {
 
   __webpack_require__(/*! daterangepicker */ "./node_modules/daterangepicker/daterangepicker.js");
 
+  __webpack_require__(/*! overlayscrollbars */ "./node_modules/overlayscrollbars/js/OverlayScrollbars.js");
+
   __webpack_require__(/*! tempusdominus-bootstrap-4 */ "./node_modules/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.js");
 
   __webpack_require__(/*! summernote */ "./node_modules/summernote/dist/summernote.js");
 
   __webpack_require__(/*! fastclick */ "./node_modules/fastclick/lib/fastclick.js");
-
-  __webpack_require__(/*! overlayscrollbars */ "./node_modules/overlayscrollbars/js/OverlayScrollbars.js");
 
   __webpack_require__(/*! datatables.net-bs4 */ "./node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js");
 } catch (e) {}

@@ -19,10 +19,10 @@ try {
     require('sparkline');
     require('moment');
     require('daterangepicker');
+    require('overlayscrollbars');
     require('tempusdominus-bootstrap-4');
     require('summernote');
     require('fastclick');
-    require('overlayscrollbars');
     require('datatables.net-bs4');
 
 } catch (e) {}

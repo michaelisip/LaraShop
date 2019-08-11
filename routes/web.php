@@ -33,6 +33,10 @@ Route::group(['prefix' => 'admin'], function () {
             Route::post('logout', 'LoginController@logout')->name('logout');
 
             Route::get('', 'DashboardController')->name('dashboard');
+
+            Route::resource('products', 'ProductController');
+
+            // Samples
             Route::view('datatable', 'admin.datatable');
             Route::view('chart', 'admin.chart');
         });
